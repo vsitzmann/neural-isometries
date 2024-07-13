@@ -1,0 +1,18 @@
+clu
+-U "jax[cuda12]"
+tensorflow[and-cuda]
+tensorflow-datasets
+chex==0.1.85
+optax
+matplotlib
+scikit-learn
+icecream
+flax
+wandb
+einops
+tqdm
+plyfile 
+PIL
+docopt
+potpourri3d
+trimesh

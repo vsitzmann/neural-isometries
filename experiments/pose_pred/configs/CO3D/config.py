@@ -1,0 +1,70 @@
+# Logging Info
+WORK_DIR = "" # Leave empty
+PROJECT_NAME = "NISO_POSE_PRED" #Change me if desired 
+
+PRE_TRAIN_DIR = "" #Leave empty
+
+
+# Training info
+TRAIN_MAX_STEP = 12
+TRAIN_SEQ_LEN = 4 
+
+# Latent parameters
+MLP_FEATURES = 512
+MLP_LAYERS = 6 
+
+KERNEL_OP_DIM = 128 
+LATENT_DIM  = 128 
+
+
+MAX_STEP    = 12
+
+
+BATCH_SIZE      = 4
+TRUE_BATCH_SIZE = 16 
+MAX_BATCH_SIZE  = 64
+
+INPUT_SIZE = (144, 144) #CO3D
+
+DATASET_NAME = "CO3D"
+
+DATA_COMPRESSION_TYPE = None
+DATA_TRAIN_SIZE = 10000 
+DATA_TEST_SIZE =  2000
+
+
+
+## Encoder + Decoder params 
+CONV_ENC_CHANNELS    = (64, 128, 256)
+CONV_ENC_BLOCK_DEPTH = (4, 4, 4)
+
+CONV_DEC_CHANNELS    = (256, 128, 64)
+CONV_DEC_BLOCK_DEPTH = (4, 4, 4) 
+
+KERNEL_SIZE = 3
+
+## Hyperparameters
+ALPHA_INIT = 1.0
+ALPHA_MAX = 1.0
+ALPHA_WARMUP_STEPS = 4000
+
+ADAM_B1 = 0.9 #0.9# 0.5
+ADAM_B2 = 0.999 #0.999 # 0.9 
+
+NUM_TRAIN_STEPS = 100000
+STOP_AFTER      = 20000
+INIT_LR         = 1.0e-8 
+LR              = 5.0e-4 
+END_LR          = 5.0e-5
+WARMUP_STEPS    = 2000 
+
+EVAL_EVERY     = 20000
+LOG_LOSS_EVERY = 100
+VIZ_EVERY      = 1000
+VIZ_SIZE       = INPUT_SIZE
+
+
+CHECKPOINT_EVERY = 10000
+
+TRIAL = 0  # Dummy for repeated runs.
+
