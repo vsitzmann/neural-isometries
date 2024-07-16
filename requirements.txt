@@ -1,5 +1,5 @@
 clu
--U "jax[cuda12]"
+jax[cuda12]
 tensorflow[and-cuda]
 tensorflow-datasets
 chex==0.1.85
@@ -12,7 +12,7 @@ wandb
 einops
 tqdm
 plyfile 
-PIL
+pillow
 docopt
 potpourri3d
 trimesh
