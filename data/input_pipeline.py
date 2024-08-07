@@ -43,8 +43,8 @@ def get_hmnist( hmnist_file ):
 def get_cshrec11(cshrec11_dir):
   NUM_CLASSES = len(os.listdir(cshrec11_dir + "train")) - 1 
   
-  train_data, train_keys = dl.load_shape_tfrecords( cshrec11_dir + "train" )
-  test_data, test_keys   = dl.load_shape_tfrecords( cshrec11_dir + "test" )
+  train_data, train_keys = dl.load_shape_tfrecords( os.path.join(cshrec11_dir, "train") )
+  test_data, test_keys   = dl.load_shape_tfrecords( os.path.join(cshrec11_dir, "test") )
       
   train_data = train_data.map( dl.parser(train_keys), num_parallel_calls=tf.data.AUTOTUNE )
   test_data  = test_data.map( dl.parser(test_keys), num_parallel_calls=tf.data.AUTOTUNE )
