@@ -20,7 +20,7 @@ def multiplicity_loss(Lambda):
 
   L = D - G  
 
-  norm = jnp.sqrt(jnp.sum( L ** 2, axis=(-2, -1))) / L.shape[-1]
+  norm = jnp.sqrt(jnp.sum( L ** 2, axis=(-2, -1)) + 1.0e-8) / L.shape[-1]
   
   return jnp.mean(norm)
   
@@ -49,17 +49,3 @@ def procrustes_loss(A, B):
   lossT = jnp.mean(jnp.abs(Ap - Bp))
   
   return lossT 
-  
-
-def block_diag_loss(Lambda):
-
-  G = fmaps.delta_mask(Lambda)
-  
-  D = fmaps.diag_to_mat(jnp.sum(G, axis=-1))
-
-  L = D - G  
-
-  norm = jnp.sqrt(jnp.sum( L ** 2, axis=(-2, -1))) / L.shape[-1]
-  
-  return jnp.mean(norm)
-
