@@ -505,7 +505,7 @@ def train_and_evaluate( cfg: Any, input_dir: str, output_dir: str ):
   ========== Setup W&B =============
   '''
   project_name = cfg.PROJECT_NAME
-  exp_name     =  "niso_{}_kopd_{}_ld_{}d_hmnist_encode".format(cfg.KERNEL_OP_DIM, cfg.LATENT_DIM, len(cfg.CONV_ENC_CHANNELS)-1, cfg.DATASET_NAME)  
+  exp_name     =  "niso_{}_kopd_{}_ld_{}d_cshrec11_encode".format(cfg.KERNEL_OP_DIM, cfg.LATENT_DIM, len(cfg.CONV_ENC_CHANNELS)-1, cfg.DATASET_NAME)  
 
   cfg.WORK_DIR = output_dir 
   cfg.CSHREC11_DIR = input_dir
