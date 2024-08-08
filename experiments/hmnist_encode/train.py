@@ -30,7 +30,6 @@ import tensorflow_datasets as tfds
 import matplotlib
 import matplotlib.cm as cm 
 import wandb
-import colormaps as cmaps
 from docopt import docopt
 
 print(jax.default_backend(), flush=True)
