@@ -18,6 +18,9 @@ source niso/bin/activate
 pip install -r requirements.txt
 ```
 
+**Warning:** `jax` and `jaxlib` versions `v0.4.29` through `v0.4.31` appear to contain a catastrophic floating point (?) bug that prevents NIso from training and evaluating correctly. Please ensure that your `jax` and `jaxlib` versions are `<= v0.4.28` or `>= v0.4.32`. 
+
+
 ## Experiments
 
 Code to run the experiments in the paper can be found in the `experiments` directory. Training data and visualizations are logged via `wandb`. Make sure to activate the virtual enviorment before running.
