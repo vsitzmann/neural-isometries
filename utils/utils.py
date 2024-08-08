@@ -1,8 +1,6 @@
 import numpy as np
 import scipy as sp
 import scipy.sparse.linalg as sla
-import robust_laplacian as rl
-import potpourri3d as pp3d
 import math
 import jax
 import jax.numpy as jnp
