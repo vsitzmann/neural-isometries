@@ -159,9 +159,7 @@ def train_step(x: Any, labels: Any, model: nn.Module, encoder: nn.Module, kernel
   def loss_fn( params ):
      
     z = encoder.apply( {"params": params["encoder"]}, x )
-    z = jnp.reshape(z, (z.shape[0], -1, z.shape[-1]))
-    z = jax.lax.stop_gradient(z)
-    
+    z = jnp.reshape(z, (z.shape[0], -1, z.shape[-1]))    
       
     _, Omega = kernel.apply({"params":params["kernel"]}, z, z)
 
